@@ -26,29 +26,29 @@ After downloading the model from the url above use the function `keras2coreml` i
 <br>
 **For example in the `main.py` file:**
 ```python3
-	(...)
-	
-	# Create model
-    model = ClassifierNetwork(mode=mode, config=config, stage=stage,
-                              model_dir=args.logs)
+(...)
 
-    # Load weights
-    if args.weights:
-        print("Loading weights ", args.weights)
-        model.load_weights(args.weights, by_name=True, verbose=verbose,
-                           restart=args.restart)
+# Create model
+model = ClassifierNetwork(mode=mode, config=config, stage=stage,
+                          model_dir=args.logs)
 
-    # Writting debug informations
-    if args.info:
-        with open('classifier_arch.txt', 'w') as f:
-            model.keras_model.summary(line_length=200,
-                                      print_fn=lambda x: f.write(x + '\n'))
+# Load weights
+if args.weights:
+	print("Loading weights ", args.weights)
+    	   model.load_weights(args.weights, by_name=True, verbose=verbose,
+							  restart=args.restart)
 
-    from convert_to_ios import keras2coreml
+# Writting debug informations
+if args.info:
+	with open('classifier_arch.txt', 'w') as f:
+		model.keras_model.summary(line_length=200,
+						print_fn=lambda x: f.write(x + '\n'))
 
-    keras2coreml(model, 'model.mlmodel')
+from convert_to_ios import keras2coreml
 
-    (...)
+keras2coreml(model, 'model.mlmodel')
+
+(...)
 
 ```
 
