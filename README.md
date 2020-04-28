@@ -25,7 +25,7 @@ You can download the code and model at https://1drv.ms/u/s!AuG441T6ysq5gytUc8LNh
 After downloading the model from the url above use the function `keras2coreml` in `convert_to_ios.py`  when using the model for inference. 
 <br>
 **For example in the `main.py` file:**
-```
+```python3
 	(...)
 	
 	# Create model
