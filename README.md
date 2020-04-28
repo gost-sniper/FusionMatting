@@ -25,7 +25,9 @@ You can download the code and model at https://1drv.ms/u/s!AuG441T6ysq5gytUc8LNh
 after downloading the model from the url above use the function `keras2coreml` in `convert_to_ios.py`  when using the model for inference. 
 **For example in the `main.py` file:**
 ```
-# Create model
+	...
+	
+	# Create model
     model = ClassifierNetwork(mode=mode, config=config, stage=stage,
                               model_dir=args.logs)
 
@@ -44,6 +46,8 @@ after downloading the model from the url above use the function `keras2coreml` i
     from convert_to_ios import keras2coreml
 
     keras2coreml(model, 'model.mlmodel')
+
+    ...
 
 ```
 
