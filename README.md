@@ -35,8 +35,8 @@ After downloading the model from the url above use the function `keras2coreml` i
 	# Load weights
 	if args.weights:
 		print("Loading weights ", args.weights)
-	    	   model.load_weights(args.weights, by_name=True, verbose=verbose,
-								  restart=args.restart)
+	    model.load_weights(args.weights, by_name=True,
+	    				   verbose=verbose, restart=args.restart)
 
 	# Writting debug informations
 	if args.info:
