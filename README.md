@@ -23,10 +23,11 @@ You can download the code and model at https://1drv.ms/u/s!AuG441T6ysq5gytUc8LNh
 ## Deploy the model on IOS devices
 
 After downloading the model from the url above use the function `keras2coreml` in `convert_to_ios.py`  when using the model for inference. 
-<p>**For example in the `main.py` file:**</p>
+<br>
+**For example in the `main.py` file:**
 ```
-	...
-
+	(...)
+	
 	# Create model
     model = ClassifierNetwork(mode=mode, config=config, stage=stage,
                               model_dir=args.logs)
@@ -47,7 +48,7 @@ After downloading the model from the url above use the function `keras2coreml` i
 
     keras2coreml(model, 'model.mlmodel')
 
-    ...
+    (...)
 
 ```
 
