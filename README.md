@@ -51,6 +51,7 @@ After downloading the model from the url above use the function `keras2coreml` i
 	(...)
 
 ```
+Don't forget to add the `costum.swift` to your project.
 
 ## Shrinking the size of the model
 
